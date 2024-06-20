@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void recebe( EditText editTextNumber) {
         textViewResult.setText("Insira um número.");
-        int vet[] = new int [3];
-        for(int i = 0; i<3; i++){
+        int vet[] = new int [20];
+        for(int i = 0; i<20; i++){
             String inputText = editTextNumber.getText().toString().trim();
             int n = Integer.parseInt(inputText);
             vet[i] = n;
@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         int aux = 0;
-        for(int i = 0; i<3; i++) {
-            for (int j = i + 1; j < 3; j++) {
+        for(int i = 0; i<20; i++) {
+            for (int j = i + 1; j < 20; j++) {
                 if (vet[i] > vet[j]) {
                     aux = vet[j];
                     vet[j] = vet[i];
@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-        for(int i = 0; i<3; i++) {
-            textViewResult.setText("menor: "+ vet[0] + " e maior:  "+ vet[3] );
+        for(int i = 0; i<20; i++) {
+            textViewResult.setText("menor: "+ vet[0] + " e maior:  "+ vet[20] );
 
         }
 
